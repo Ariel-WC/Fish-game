@@ -1,0 +1,243 @@
+[gd_scene load_steps=14 format=3 uid="uid://bnktm7g683jeg"]
+
+[ext_resource type="Texture2D" uid="uid://bk3wuvhjpxgod" path="res://Sprites/Backgroud/Background_teste.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://cbdxh6qr3j2vk" path="res://character_body_2d.gd" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://bas8tbbqvo6x8" path="res://Sprites/Fish/tateixe.png" id="3_epypp"]
+[ext_resource type="Script" uid="uid://b5yudfemq0vh5" path="res://player.gd" id="4_kdubu"]
+[ext_resource type="Texture2D" uid="uid://b7ub45i1xundr" path="res://Sprites/player/player.png" id="5_kdubu"]
+[ext_resource type="Texture2D" uid="uid://w5bn1j8lo7ut" path="res://Sprites/player/Teste.png" id="6_d21ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(12.025, 12.5)
+
+[sub_resource type="Animation" id="Animation_x0ka3"]
+resource_name = "Fishing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Idle_spr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_d21ai")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Idle_spr:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Idle_spr:frame_coords")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hqns4"]
+resource_name = "Fishing_transition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Idle_spr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_d21ai")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Idle_spr:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Idle_spr:frame_coords")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.1, 0.166667, 0.5, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Idle_spr:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.108703, 0.20009, 0.467518, 0.539666, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.232129, -0.232129, 0.235619, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ir8iy"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Idle_spr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_kdubu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Idle_spr:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Idle_spr:frame_coords")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4d7sh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Idle_spr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_kdubu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Idle_spr:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Idle_spr:frame_coords")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Idle_spr:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0h7mo"]
+_data = {
+&"Fishing": SubResource("Animation_x0ka3"),
+&"Fishing_transition": SubResource("Animation_hqns4"),
+&"Idle": SubResource("Animation_ir8iy"),
+&"RESET": SubResource("Animation_4d7sh")
+}
+
+[node name="Jogo" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [550.0, 720.0]
+
+[node name="BackgroundTeste" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_wtcfe")
+
+[node name="Peixe" type="CharacterBody2D" parent="."]
+position = Vector2(477, 584)
+script = ExtResource("2_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peixe"]
+shape = SubResource("RectangleShape2D_epypp")
+debug_color = Color(1, 0, 0.0156863, 0.14902)
+
+[node name="Tateixe" type="Sprite2D" parent="Peixe"]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_epypp")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(196, 407)
+scale = Vector2(3, 3)
+script = ExtResource("4_kdubu")
+
+[node name="Player_collision" type="CollisionShape2D" parent="Player"]
+texture_filter = 1
+position = Vector2(-0.0124969, -0.75)
+shape = SubResource("RectangleShape2D_rj586")
+one_way_collision_margin = 0.0
+debug_color = Color(0.0627451, 0, 0.984314, 0.513726)
+
+[node name="Player_Idle_spr" type="Sprite2D" parent="Player"]
+texture_filter = 1
+texture = ExtResource("5_kdubu")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+&"": SubResource("AnimationLibrary_0h7mo")
+}
